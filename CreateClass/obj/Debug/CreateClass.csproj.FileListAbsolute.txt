@@ -1,0 +1,7 @@
+C:\Users\Zalzur\source\repos\CreateClass\CreateClass\bin\Debug\CreateClass.exe.config
+C:\Users\Zalzur\source\repos\CreateClass\CreateClass\bin\Debug\CreateClass.exe
+C:\Users\Zalzur\source\repos\CreateClass\CreateClass\bin\Debug\CreateClass.pdb
+C:\Users\Zalzur\source\repos\CreateClass\CreateClass\obj\Debug\CreateClass.csprojAssemblyReference.cache
+C:\Users\Zalzur\source\repos\CreateClass\CreateClass\obj\Debug\CreateClass.csproj.CoreCompileInputs.cache
+C:\Users\Zalzur\source\repos\CreateClass\CreateClass\obj\Debug\CreateClass.exe
+C:\Users\Zalzur\source\repos\CreateClass\CreateClass\obj\Debug\CreateClass.pdb
