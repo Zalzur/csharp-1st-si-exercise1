@@ -41,10 +41,14 @@ namespace CreateClass
             employee2.Room = new Room(10);
             Console.WriteLine(employee1.ToString() + "\n");
             Console.WriteLine(employee2.ToString() + "\n");
+            Employee cloneEmployee = (Employee)employee1.Clone();
+            cloneEmployee.Room.roomNumber = 112;
+            Console.WriteLine(cloneEmployee.ToString() + "\n");
+            Console.ReadKey();
         }   
     }
 
-    class Employee : Person
+    class Employee : Person, ICloneable
     {
         private int salary;
         private string profession;
@@ -59,6 +63,13 @@ namespace CreateClass
         public override string ToString()
         {
             return base.ToString() + "\nSalary: " + salary + "\nProfession: " + profession + "\nRoom number: " + Room.roomNumber;
+        }
+
+        public object Clone()
+        {
+            Employee newEmployee = (Employee)this.MemberwiseClone();
+            newEmployee.Room = new Room(Room.roomNumber);
+            return newEmployee;
         }
     }
 
