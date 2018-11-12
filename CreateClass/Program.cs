@@ -14,7 +14,7 @@ namespace CreateClass
         private DateTime birthDate;
         private Genders gender;
 
-        public Person(string name, String birthDateString, Genders gender)
+        public Person(string name, string birthDateString, Genders gender)
         {
             this.name = name;
             this.birthDate = Convert.ToDateTime(birthDateString); ;
@@ -33,8 +33,42 @@ namespace CreateClass
             Person person3 = new Person("Ferenc", "11/15/1990", Genders.Male);
             Console.WriteLine(person1.ToString() + "\n");
             Console.WriteLine(person2.ToString() + "\n");
-            Console.WriteLine(person3.ToString());
-            Console.ReadKey();
+            Console.WriteLine(person3.ToString() + "\n");
+
+            Employee employee1 = new Employee("John", "11/11/1972", Genders.Male, 2000, "Hitman");
+            Employee employee2 = new Employee("Elizabeth", "03/05/1986", Genders.Female, 500, "Janitor");
+            employee1.Room = new Room(47);
+            employee2.Room = new Room(10);
+            Console.WriteLine(employee1.ToString() + "\n");
+            Console.WriteLine(employee2.ToString() + "\n");
         }   
+    }
+
+    class Employee : Person
+    {
+        private int salary;
+        private string profession;
+        internal Room Room { get; set; }
+
+        public Employee(string name, string birthDateString, Genders gender, int salary, string profession) : base(name, birthDateString, gender)
+        {
+            this.salary = salary;
+            this.profession = profession;
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + "\nSalary: " + salary + "\nProfession: " + profession + "\nRoom number: " + Room.roomNumber;
+        }
+    }
+
+    class Room
+    {
+        public int roomNumber;
+
+        public Room(int roomNumber)
+        {
+            this.roomNumber = roomNumber;
+        }
     }
 }
